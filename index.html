@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Reeshal — Brand, Social & Founder Support</title>
+  <title>Reeshal — Brand & Social Marketing</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -113,11 +113,11 @@
     .nav-links {
       display: flex;
       align-items: center;
-      gap: 8px;
+      gap: 5px;
     }
 
     .nav-links a {
-      padding: 8px 13px;
+      padding: 8px 12px;
       border-radius: 999px;
       font-size: 13px;
       font-weight: 600;
@@ -127,6 +127,11 @@
     .nav-links a:hover {
       background: var(--pink);
       transform: rotate(-2deg);
+    }
+
+    .nav-resume {
+      background: var(--yellow);
+      border: 1.5px solid var(--line);
     }
 
     .nav-contact {
@@ -187,14 +192,24 @@
     }
 
     .hero-description {
-      max-width: 580px;
+      max-width: 590px;
       font-size: 18px;
       line-height: 1.75;
       color: #555;
-      margin-bottom: 30px;
+      margin-bottom: 18px;
     }
 
     .hero-description strong {
+      color: var(--text);
+    }
+
+    .hero-focus {
+      font-size: 13px;
+      color: var(--muted);
+      margin-bottom: 28px;
+    }
+
+    .hero-focus strong {
       color: var(--text);
     }
 
@@ -288,8 +303,6 @@
       box-shadow: 7px 7px 0 var(--line);
     }
 
-    /* THIS IS NOW ON THE PHOTO */
-
     .strategy-sticker {
       position: absolute;
       right: -35px;
@@ -364,72 +377,6 @@
       color: var(--muted);
       font-size: 14px;
       line-height: 1.7;
-    }
-
-    /* =========================
-       SERVICES
-    ========================= */
-
-    .services-grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 20px;
-    }
-
-    .service-card {
-      position: relative;
-      overflow: hidden;
-
-      padding: 34px;
-
-      border: 2px solid var(--line);
-      border-radius: var(--radius);
-
-      min-height: 285px;
-
-      box-shadow: var(--shadow);
-
-      transition: 0.25s ease;
-    }
-
-    .service-card:nth-child(1) {
-      background: var(--pink);
-    }
-
-    .service-card:nth-child(2) {
-      background: var(--yellow);
-    }
-
-    .service-card:hover {
-      transform: translateY(-5px) rotate(-0.5deg);
-    }
-
-    .service-number {
-      font-family: "Caveat", cursive;
-      font-size: 22px;
-      margin-bottom: 28px;
-    }
-
-    .service-card h3 {
-      font-family: "Playfair Display", serif;
-      font-size: 34px;
-      margin-bottom: 12px;
-    }
-
-    .service-card p {
-      max-width: 480px;
-      color: #555;
-      font-size: 15px;
-    }
-
-    .service-doodle {
-      position: absolute;
-      right: 28px;
-      bottom: 20px;
-
-      font-family: "Caveat", cursive;
-      font-size: 26px;
-      transform: rotate(-8deg);
     }
 
     /* =========================
@@ -600,7 +547,7 @@
 
       cursor: pointer;
 
-      min-height: 250px;
+      min-height: 270px;
 
       transition: 0.22s ease;
     }
@@ -624,7 +571,7 @@
 
       font-size: 25px;
 
-      margin-bottom: 28px;
+      margin-bottom: 25px;
 
       position: relative;
     }
@@ -653,12 +600,23 @@
     }
 
     .file-type {
-      font-size: 11px;
+      font-size: 10px;
       font-weight: 700;
       color: var(--muted);
       text-transform: uppercase;
       letter-spacing: 0.07em;
-      margin-bottom: 6px;
+      margin-bottom: 7px;
+    }
+
+    .file-badge {
+      display: inline-block;
+      background: var(--yellow);
+      border: 1.5px solid var(--line);
+      border-radius: 999px;
+      padding: 3px 8px;
+      font-size: 9px;
+      font-weight: 700;
+      margin-bottom: 10px;
     }
 
     .project-file h4 {
@@ -671,6 +629,7 @@
     .project-file p {
       color: var(--muted);
       font-size: 12px;
+      line-height: 1.55;
     }
 
     .file-corner {
@@ -680,6 +639,98 @@
 
       font-family: "Caveat", cursive;
       font-size: 17px;
+    }
+
+    /* =========================
+       SERVICES
+    ========================= */
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 20px;
+    }
+
+    .service-card {
+      position: relative;
+      overflow: hidden;
+
+      padding: 34px;
+
+      border: 2px solid var(--line);
+      border-radius: var(--radius);
+
+      min-height: 285px;
+
+      box-shadow: var(--shadow);
+
+      transition: 0.25s ease;
+    }
+
+    .service-card:nth-child(1) {
+      background: var(--pink);
+    }
+
+    .service-card:nth-child(2) {
+      background: var(--yellow);
+    }
+
+    .service-card:hover {
+      transform: translateY(-5px) rotate(-0.5deg);
+    }
+
+    .service-number {
+      font-family: "Caveat", cursive;
+      font-size: 22px;
+      margin-bottom: 28px;
+    }
+
+    .service-card h3 {
+      font-family: "Playfair Display", serif;
+      font-size: 34px;
+      margin-bottom: 12px;
+    }
+
+    .service-card p {
+      max-width: 480px;
+      color: #555;
+      font-size: 15px;
+    }
+
+    .service-doodle {
+      position: absolute;
+      right: 28px;
+      bottom: 20px;
+
+      font-family: "Caveat", cursive;
+      font-size: 26px;
+      transform: rotate(-8deg);
+    }
+
+    /* =========================
+       SKILLS
+    ========================= */
+
+    .skills-strip {
+      margin-top: 25px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 9px;
+    }
+
+    .skill-pill {
+      border: 2px solid var(--line);
+      background: white;
+      border-radius: 999px;
+      padding: 8px 13px;
+      font-size: 12px;
+      font-weight: 600;
+      transition: 0.2s ease;
+    }
+
+    .skill-pill:hover {
+      background: var(--yellow);
+      transform: rotate(-2deg);
     }
 
     /* =========================
@@ -830,15 +881,30 @@
     .currently h3 {
       font-family: "Playfair Display", serif;
       font-size: 38px;
-      max-width: 650px;
+      max-width: 720px;
       line-height: 1.1;
       margin-bottom: 15px;
     }
 
     .currently p {
       color: #d2d2d2;
-      max-width: 650px;
+      max-width: 680px;
       font-size: 15px;
+    }
+
+    .currently-roles {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 22px;
+    }
+
+    .currently-role {
+      border: 1.5px solid #777;
+      border-radius: 999px;
+      padding: 6px 11px;
+      font-size: 11px;
+      color: #eee;
     }
 
     /* =========================
@@ -869,6 +935,23 @@
       max-width: 500px;
       margin: 0 auto 28px;
       color: var(--muted);
+    }
+
+    .contact-roles {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 28px;
+    }
+
+    .contact-role {
+      border: 2px solid var(--line);
+      background: var(--yellow);
+      border-radius: 999px;
+      padding: 6px 11px;
+      font-size: 11px;
+      font-weight: 600;
     }
 
     .contact-email {
@@ -1183,6 +1266,12 @@
         margin-right: auto;
       }
 
+      .hero-focus {
+        max-width: 500px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
       .hero-buttons {
         justify-content: center;
       }
@@ -1429,10 +1518,23 @@
       <a href="#top" class="nav-logo">Reeshal ✦</a>
 
       <div class="nav-links">
-        <a href="#services">What I do</a>
         <a href="#work">Work</a>
+        <a href="#services">What I do</a>
         <a href="#about">About</a>
-        <a href="#contact" class="nav-contact">Let's talk →</a>
+
+        <!-- CHANGE THIS TO YOUR ACTUAL CV LINK -->
+        <a
+          href="YOUR-RESUME-LINK"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="nav-resume"
+        >
+          Resume ↗
+        </a>
+
+        <a href="#contact" class="nav-contact">
+          Let's talk →
+        </a>
       </div>
     </nav>
   </div>
@@ -1446,12 +1548,13 @@
 
     <section class="hero">
       <div class="container">
+
         <div class="hero-grid">
 
           <div class="hero-copy">
 
             <div class="eyebrow">
-              ✦ Brand + Social + Founder Support
+              ✦ Brand + Social Marketing
             </div>
 
             <h1>
@@ -1460,19 +1563,28 @@
             </h1>
 
             <p class="hero-description">
-              I help brands and founders turn
-              <strong>good ideas into things people actually notice.</strong>
-              From social strategy and storytelling to keeping the moving pieces moving.
+              I turn
+              <strong>audience insights into brand ideas,
+              social strategies and campaigns</strong>
+              people actually want to engage with.
+            </p>
+
+            <p class="hero-focus">
+              <strong>Open to:</strong>
+              Brand Marketing · Social Media · Content Strategy ·
+              Marketing Intern / Associate roles
             </p>
 
             <div class="hero-buttons">
+
               <a href="#work" class="btn btn-dark">
                 See my work →
               </a>
 
               <a href="#contact" class="btn btn-light">
-                Say hi
+                Let's talk
               </a>
+
             </div>
 
           </div>
@@ -1487,7 +1599,6 @@
                 alt="Reeshal"
               >
 
-              <!-- MOVED ONTO PHOTO -->
               <div class="strategy-sticker">
                 Strategy,<br>
                 but make it fun ✦
@@ -1500,82 +1611,6 @@
             </div>
 
           </div>
-
-        </div>
-      </div>
-    </section>
-
-
-    <!-- =========================
-         SERVICES
-    ========================= -->
-
-    <section class="section" id="services">
-      <div class="container">
-
-        <div class="section-heading">
-
-          <div>
-            <div class="section-kicker">what I actually do</div>
-
-            <h2 class="section-title">
-              Two sides.<br>
-              One brain.
-            </h2>
-          </div>
-
-          <p class="section-description">
-            I like being somewhere between the big-picture idea
-            and making sure the little things actually happen.
-          </p>
-
-        </div>
-
-
-        <div class="services-grid">
-
-          <article class="service-card">
-
-            <div class="service-number">01 / Brand + Social</div>
-
-            <h3>
-              Make people<br>
-              care.
-            </h3>
-
-            <p>
-              Brand thinking, social strategy, content concepts,
-              storytelling and campaigns that feel like the brand —
-              not a marketing template.
-            </p>
-
-            <div class="service-doodle">
-              ideas → ✦
-            </div>
-
-          </article>
-
-
-          <article class="service-card">
-
-            <div class="service-number">02 / Founder Support</div>
-
-            <h3>
-              Make things<br>
-              happen.
-            </h3>
-
-            <p>
-              Keeping founders organised, helping with research,
-              outreach, content operations and all the little moving
-              pieces behind the scenes.
-            </p>
-
-            <div class="service-doodle">
-              less chaos :) 
-            </div>
-
-          </article>
 
         </div>
 
@@ -1593,17 +1628,19 @@
         <div class="section-heading">
 
           <div>
-            <div class="section-kicker">a little peek inside</div>
+            <div class="section-kicker">
+              selected work ✦
+            </div>
 
             <h2 class="section-title">
-              My work,
-              <br>filed neatly.
+              Strategy,
+              <br>but make it real.
             </h2>
           </div>
 
           <p class="section-description">
-            Two folders. A few projects. Click around —
-            everything is meant to be opened.
+            Brand audits, content strategies, campaign concepts
+            and systems I've built to solve real marketing problems.
           </p>
 
         </div>
@@ -1613,7 +1650,10 @@
 
         <div class="folder-grid" id="folderGrid">
 
-          <button class="folder" onclick="openFolder('brand')">
+          <button
+            class="folder"
+            onclick="openFolder('brand')"
+          >
 
             <span class="folder-tab"></span>
 
@@ -1636,20 +1676,23 @@
           </button>
 
 
-          <button class="folder" onclick="openFolder('founder')">
+          <button
+            class="folder"
+            onclick="openFolder('founder')"
+          >
 
             <span class="folder-tab"></span>
 
             <div class="folder-icon">📁</div>
 
             <h3>
-              Founder<br>
-              Support
+              Marketing +<br>
+              Founder Support
             </h3>
 
             <p>
-              Systems, operations, research,
-              outreach and creator support.
+              Research, outreach, creator operations,
+              systems and behind-the-scenes marketing.
             </p>
 
             <div class="folder-arrow">
@@ -1670,15 +1713,27 @@
           <div class="folder-header">
 
             <div class="folder-header-left">
-              <div class="folder-header-icon">📁</div>
+
+              <div class="folder-header-icon">
+                📁
+              </div>
 
               <div>
-                <div class="section-kicker">folder opened</div>
-                <h3>Brand + Social</h3>
+                <div class="section-kicker">
+                  folder opened
+                </div>
+
+                <h3>
+                  Brand + Social
+                </h3>
               </div>
+
             </div>
 
-            <button class="back-btn" onclick="closeFolder()">
+            <button
+              class="back-btn"
+              onclick="closeFolder()"
+            >
               ← Back to folders
             </button>
 
@@ -1692,7 +1747,13 @@
               onclick="openProject('defi')"
             >
 
-              <div class="file-icon">✦</div>
+              <div class="file-icon">
+                ✦
+              </div>
+
+              <div class="file-badge">
+                SPEC PROJECT
+              </div>
 
               <div class="file-type">
                 Brand Audit · Social Campaign
@@ -1703,7 +1764,9 @@
               </h4>
 
               <p>
-                Brand audit + social media campaign
+                Audited the brand's positioning and social presence,
+                then developed a campaign direction to strengthen
+                storytelling and audience connection.
               </p>
 
               <div class="file-corner">
@@ -1718,7 +1781,13 @@
               onclick="openProject('content')"
             >
 
-              <div class="file-icon">☕</div>
+              <div class="file-icon">
+                ☕
+              </div>
+
+              <div class="file-badge">
+                SPEC PROJECT
+              </div>
 
               <div class="file-type">
                 Content Strategy · Storytelling
@@ -1729,7 +1798,9 @@
               </h4>
 
               <p>
-                Social storytelling + content concepts
+                Built recurring content pillars and editorial-style
+                concepts designed to make a founder-led brand feel
+                more consistent, personal and recognisable.
               </p>
 
               <div class="file-corner">
@@ -1744,7 +1815,13 @@
               onclick="openProject('maya')"
             >
 
-              <div class="file-icon">♡</div>
+              <div class="file-icon">
+                ♡
+              </div>
+
+              <div class="file-badge">
+                SPEC PROJECT
+              </div>
 
               <div class="file-type">
                 Product Launch Campaign
@@ -1755,7 +1832,9 @@
               </h4>
 
               <p>
-                A launch campaign built for Indian students
+                A student-focused launch campaign built around
+                audience insight, creative direction and playful
+                storytelling.
               </p>
 
               <div class="file-corner">
@@ -1778,15 +1857,27 @@
           <div class="folder-header">
 
             <div class="folder-header-left">
-              <div class="folder-header-icon">📁</div>
+
+              <div class="folder-header-icon">
+                📁
+              </div>
 
               <div>
-                <div class="section-kicker">folder opened</div>
-                <h3>Founder Support</h3>
+                <div class="section-kicker">
+                  folder opened
+                </div>
+
+                <h3>
+                  Marketing + Founder Support
+                </h3>
               </div>
+
             </div>
 
-            <button class="back-btn" onclick="closeFolder()">
+            <button
+              class="back-btn"
+              onclick="closeFolder()"
+            >
               ← Back to folders
             </button>
 
@@ -1800,7 +1891,9 @@
               onclick="openProject('weekly')"
             >
 
-              <div class="file-icon">✓</div>
+              <div class="file-icon">
+                ✓
+              </div>
 
               <div class="file-type">
                 Founder Operations
@@ -1811,7 +1904,8 @@
               </h4>
 
               <p>
-                A simple operating system for keeping the week moving
+                A lightweight operating system for keeping priorities,
+                follow-ups and moving pieces visible in one place.
               </p>
 
               <div class="file-corner">
@@ -1826,7 +1920,9 @@
               onclick="openProject('sop')"
             >
 
-              <div class="file-icon">↗</div>
+              <div class="file-icon">
+                ↗
+              </div>
 
               <div class="file-type">
                 Creator Operations
@@ -1837,7 +1933,8 @@
               </h4>
 
               <p>
-                A repeatable workflow for creator collaborations
+                A repeatable workflow covering creator research,
+                outreach, responses, deliverables and follow-ups.
               </p>
 
               <div class="file-corner">
@@ -1852,7 +1949,9 @@
               onclick="openProject('pr')"
             >
 
-              <div class="file-icon">✉</div>
+              <div class="file-icon">
+                ✉
+              </div>
 
               <div class="file-type">
                 PR + Outreach
@@ -1863,7 +1962,8 @@
               </h4>
 
               <p>
-                A clean system for managing outreach and follow-ups
+                A practical system for organising contacts,
+                outreach status, follow-ups and relationship notes.
               </p>
 
               <div class="file-corner">
@@ -1881,16 +1981,143 @@
 
 
     <!-- =========================
-         PROCESS
+         SERVICES
     ========================= -->
 
-    <section class="section">
+    <section class="section" id="services">
       <div class="container">
 
         <div class="section-heading">
 
           <div>
-            <div class="section-kicker">how I work</div>
+            <div class="section-kicker">
+              what I can bring to a team
+            </div>
+
+            <h2 class="section-title">
+              Two sides.<br>
+              One brain.
+            </h2>
+          </div>
+
+          <p class="section-description">
+            I like being somewhere between the big-picture idea
+            and making sure the little things actually happen.
+          </p>
+
+        </div>
+
+
+        <div class="services-grid">
+
+          <article class="service-card">
+
+            <div class="service-number">
+              01 / Brand + Social
+            </div>
+
+            <h3>
+              Make people<br>
+              care.
+            </h3>
+
+            <p>
+              Brand thinking, audience research, social strategy,
+              content concepts, storytelling and campaigns that
+              feel like the brand — not a marketing template.
+            </p>
+
+            <div class="service-doodle">
+              ideas → ✦
+            </div>
+
+          </article>
+
+
+          <article class="service-card">
+
+            <div class="service-number">
+              02 / Marketing + Founder Support
+            </div>
+
+            <h3>
+              Make things<br>
+              happen.
+            </h3>
+
+            <p>
+              Research, creator outreach, content operations,
+              organisation and the behind-the-scenes work that
+              keeps a growing brand moving.
+            </p>
+
+            <div class="service-doodle">
+              less chaos :)
+            </div>
+
+          </article>
+
+        </div>
+
+
+        <div class="skills-strip">
+
+          <span class="skill-pill">
+            Brand Strategy
+          </span>
+
+          <span class="skill-pill">
+            Audience Research
+          </span>
+
+          <span class="skill-pill">
+            Social Media
+          </span>
+
+          <span class="skill-pill">
+            Content Strategy
+          </span>
+
+          <span class="skill-pill">
+            Campaign Concepts
+          </span>
+
+          <span class="skill-pill">
+            Storytelling
+          </span>
+
+          <span class="skill-pill">
+            Creator Outreach
+          </span>
+
+          <span class="skill-pill">
+            Research
+          </span>
+
+          <span class="skill-pill">
+            Marketing Operations
+          </span>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- =========================
+         PROCESS
+    ========================= -->
+
+    <section class="section">
+
+      <div class="container">
+
+        <div class="section-heading">
+
+          <div>
+            <div class="section-kicker">
+              how I work
+            </div>
 
             <h2 class="section-title">
               The process
@@ -1908,55 +2135,80 @@
         <div class="process-grid">
 
           <article class="process-card">
-            <div class="process-number">01</div>
 
-            <h4>Understand</h4>
+            <div class="process-number">
+              01
+            </div>
+
+            <h4>
+              Understand
+            </h4>
 
             <p>
               Get clear on the brand, audience, problem
               and what we're actually trying to achieve.
             </p>
+
           </article>
 
 
           <article class="process-card">
-            <div class="process-number">02</div>
 
-            <h4>Think</h4>
+            <div class="process-number">
+              02
+            </div>
+
+            <h4>
+              Think
+            </h4>
 
             <p>
               Find the insight, direction or opportunity
               hiding underneath the obvious answer.
             </p>
+
           </article>
 
 
           <article class="process-card">
-            <div class="process-number">03</div>
 
-            <h4>Make</h4>
+            <div class="process-number">
+              03
+            </div>
+
+            <h4>
+              Make
+            </h4>
 
             <p>
               Turn the strategy into concepts, systems,
               content and things people can actually use.
             </p>
+
           </article>
 
 
           <article class="process-card">
-            <div class="process-number">04</div>
 
-            <h4>Move</h4>
+            <div class="process-number">
+              04
+            </div>
+
+            <h4>
+              Move
+            </h4>
 
             <p>
               Ship it, learn from it, improve it and
               keep the momentum going.
             </p>
+
           </article>
 
         </div>
 
       </div>
+
     </section>
 
 
@@ -1965,6 +2217,7 @@
     ========================= -->
 
     <section class="section" id="about">
+
       <div class="container">
 
         <div class="about-grid">
@@ -1978,7 +2231,7 @@
             <p>
               A curious person who likes figuring out why
               people care about things — and then turning
-              that into something useful.
+              that thinking into something useful.
             </p>
 
           </div>
@@ -1987,32 +2240,58 @@
           <div class="about-copy">
 
             <p>
-              I’m <strong>Reeshal</strong>, and I’m interested in the
-              space where <strong>strategy, creativity and execution</strong>
+              I’m <strong>Reeshal</strong>, an early-career marketer
+              interested in the space where
+              <strong>strategy, creativity and execution</strong>
               overlap.
             </p>
 
             <p>
               I enjoy taking a messy idea and giving it shape —
-              whether that's a social campaign, a content direction,
-              a founder's weekly system or a list of people worth
-              reaching out to.
+              figuring out the audience, finding the interesting
+              angle and turning it into something a team can
+              actually use.
             </p>
 
             <p>
-              I’m especially drawn to <strong>founder-led brands,
-              growing teams and ideas that still feel a little
-              unfinished.</strong>
+              My work so far has explored
+              <strong>brand audits, social strategy, content,
+              campaigns, creator operations and marketing systems.</strong>
+            </p>
+
+            <p>
+              I’m especially drawn to
+              <strong>founder-led brands, growing teams and ideas
+              that still feel a little unfinished.</strong>
             </p>
 
 
             <div class="about-tags">
-              <span class="tag">Brand Strategy</span>
-              <span class="tag">Social Media</span>
-              <span class="tag">Content</span>
-              <span class="tag">Founder Support</span>
-              <span class="tag">Research</span>
-              <span class="tag">Operations</span>
+
+              <span class="tag">
+                Brand Strategy
+              </span>
+
+              <span class="tag">
+                Social Media
+              </span>
+
+              <span class="tag">
+                Content
+              </span>
+
+              <span class="tag">
+                Campaigns
+              </span>
+
+              <span class="tag">
+                Research
+              </span>
+
+              <span class="tag">
+                Creator Operations
+              </span>
+
             </div>
 
           </div>
@@ -2020,6 +2299,7 @@
         </div>
 
       </div>
+
     </section>
 
 
@@ -2028,6 +2308,7 @@
     ========================= -->
 
     <section class="section">
+
       <div class="container">
 
         <div class="currently">
@@ -2037,19 +2318,49 @@
           </div>
 
           <h3>
-            Building, learning and looking for
-            interesting people to build with.
+            Looking for a team where I can
+            learn fast and actually contribute.
           </h3>
 
           <p>
-            Open to brand, social, marketing and founder-support
-            opportunities where I can learn fast and actually
-            contribute.
+            I'm building my marketing experience through
+            hands-on brand, social and campaign projects —
+            and looking for opportunities where I can bring
+            both creative thinking and organised execution.
           </p>
+
+          <div class="currently-roles">
+
+            <span class="currently-role">
+              Brand Marketing
+            </span>
+
+            <span class="currently-role">
+              Social Media
+            </span>
+
+            <span class="currently-role">
+              Content Strategy
+            </span>
+
+            <span class="currently-role">
+              Marketing Intern
+            </span>
+
+            <span class="currently-role">
+              Junior Marketing
+            </span>
+
+            <span class="currently-role">
+              Founder-led Teams
+            </span>
+
+          </div>
 
         </div>
 
       </div>
+
     </section>
 
 
@@ -2058,6 +2369,7 @@
     ========================= -->
 
     <section class="contact" id="contact">
+
       <div class="container">
 
         <div class="contact-kicker">
@@ -2070,10 +2382,34 @@
         </h2>
 
         <p>
-          If you have a brand, project, idea or slightly chaotic
-          founder brain that needs some help — say hi.
+          Looking for someone who can think through the idea,
+          make the thing and keep the moving pieces moving?
+          Say hi.
         </p>
 
+
+        <div class="contact-roles">
+
+          <span class="contact-role">
+            Brand
+          </span>
+
+          <span class="contact-role">
+            Social
+          </span>
+
+          <span class="contact-role">
+            Content
+          </span>
+
+          <span class="contact-role">
+            Marketing
+          </span>
+
+        </div>
+
+
+        <!-- REPLACE WITH YOUR REAL EMAIL -->
         <a
           href="mailto:reeshal@example.com"
           class="contact-email"
@@ -2082,6 +2418,7 @@
         </a>
 
       </div>
+
     </section>
 
   </main>
@@ -2092,6 +2429,7 @@
   ========================= -->
 
   <footer>
+
     <div class="container">
 
       <div>
@@ -2107,6 +2445,7 @@
       </div>
 
     </div>
+
   </footer>
 
 
@@ -2141,11 +2480,17 @@
 
       <div class="modal-body">
 
-        <div class="modal-title" id="modalTitle">
+        <div
+          class="modal-title"
+          id="modalTitle"
+        >
           Project
         </div>
 
-        <div class="modal-subtitle" id="modalSubtitle">
+        <div
+          class="modal-subtitle"
+          id="modalSubtitle"
+        >
           Project description
         </div>
 
@@ -2205,66 +2550,90 @@
 
       defi: {
         title: "Brand Audit, Social Media Campaign",
-        subtitle: "Brand positioning, audience research",
+        subtitle: "Brand positioning · Audience research · Social strategy",
+
         description:
-          "A brand audit and social media campaign exploring how Defi Beauty could strengthen its positioning, storytelling and content presence.",
+          "A brand audit and social media campaign exploring how Defi Beauty could strengthen its positioning, storytelling and content presence. The project looks at the brand's current communication, audience and social opportunities before translating those insights into a campaign direction.",
+
         image: "Defi.png",
+
         link: "https://canva.link/x8jprakk3bvham7",
+
         linkText: "View Defi project ↗"
       },
 
 
       content: {
         title: "Content Strategy for a Founder-Led Brand",
-        subtitle: "Content Strategy · Social Storytelling",
+        subtitle: "Content strategy · Social storytelling · Editorial thinking",
+
         description:
-          "A content strategy project focused on building a stronger social presence for a founder-led brand through recurring content pillars, storytelling and editorial-style formats.",
+          "A content strategy project focused on building a stronger social presence for a founder-led brand. I developed recurring content pillars, storytelling directions and editorial-style formats designed to make the brand feel more consistent, recognisable and personal.",
+
         image: "reeeee.png",
+
         link: "https://canva.link/scre6kdg0vuky7d",
+
         linkText: "View content strategy ↗"
       },
 
 
       maya: {
         title: "Maya’s Experiment",
-        subtitle: "Product Launch Campaign",
+        subtitle: "Product launch campaign · Indian student audience",
+
         description:
-          "A fictional product launch campaign created specifically for Indian students. The concept combines student culture, fashion and playful storytelling into one launch experience.",
+          "A fictional product launch campaign created specifically for Indian students. The concept combines audience insight, student culture, fashion and playful storytelling to create a launch that feels native to the audience rather than like traditional product advertising.",
+
         browser: true,
+
         link: "https://mayascampaign.vercel.app/",
+
         linkText: "View live campaign ↗"
       },
 
 
       weekly: {
         title: "Founder Weekly Dashboard",
-        subtitle: "Founder Operations",
+        subtitle: "Founder operations · Organisation · Execution",
+
         description:
-          "A simple weekly dashboard designed to help a founder see priorities, follow-ups, tasks and moving pieces in one place — without creating another complicated system.",
+          "A simple weekly dashboard designed to help a founder see priorities, follow-ups, tasks and moving pieces in one place — without creating another complicated system. The goal was to make execution easier to see and easier to act on.",
+
         image: "Weekly_dashboard.png",
+
         link: "https://docs.google.com/spreadsheets/d/1Z5uaT5L7JrdxM-8Kn2PQELy-SFRF84Czv_ciCi35aII/edit?usp=sharing",
+
         linkText: "Open dashboard ↗"
       },
 
 
       sop: {
         title: "Instagram Collaboration SOP",
-        subtitle: "Creator Operations",
+        subtitle: "Creator operations · Outreach · Workflow",
+
         description:
-          "A repeatable workflow for managing Instagram collaborations — from finding creators and initial outreach to tracking responses, deliverables and follow-ups.",
+          "A repeatable workflow for managing Instagram collaborations — from researching relevant creators and initial outreach to tracking responses, deliverables and follow-ups. Built to make collaboration management easier to repeat and scale.",
+
         image: "sop.png",
+
         link: "https://docs.google.com/document/d/12iS33K40oNPjLa6oBhQhSipLe2Ww6-N_aZQtKIFH-Z0/edit?usp=sharing",
+
         linkText: "Open SOP ↗"
       },
 
 
       pr: {
         title: "PR Outreach Tracker",
-        subtitle: "PR + Outreach",
+        subtitle: "PR · Outreach · Relationship management",
+
         description:
-          "A practical outreach tracker built to keep PR contacts, outreach status, follow-ups and notes organised in one easy-to-use system.",
+          "A practical outreach tracker built to keep PR contacts, outreach status, follow-ups and notes organised in one easy-to-use system. Designed to turn a scattered outreach process into something clear and manageable.",
+
         image: "PR_Tracker.png",
+
         link: "https://docs.google.com/spreadsheets/d/1NLbX7HVXS0XpwQqgPCysN_JSifJreGyZsnWKky_1Prs/edit?usp=sharing",
+
         linkText: "Open PR tracker ↗"
       }
 
@@ -2277,45 +2646,64 @@
 
     function openFolder(folder) {
 
-      const folderGrid = document.getElementById("folderGrid");
-      const brandProjects = document.getElementById("brandProjects");
-      const founderProjects = document.getElementById("founderProjects");
+      const folderGrid =
+        document.getElementById("folderGrid");
+
+      const brandProjects =
+        document.getElementById("brandProjects");
+
+      const founderProjects =
+        document.getElementById("founderProjects");
+
 
       folderGrid.style.display = "none";
 
       brandProjects.classList.remove("active");
       founderProjects.classList.remove("active");
 
+
       if (folder === "brand") {
         brandProjects.classList.add("active");
       }
+
 
       if (folder === "founder") {
         founderProjects.classList.add("active");
       }
 
+
       document.getElementById("work").scrollIntoView({
         behavior: "smooth",
         block: "start"
       });
+
     }
 
 
     function closeFolder() {
 
-      const folderGrid = document.getElementById("folderGrid");
-      const brandProjects = document.getElementById("brandProjects");
-      const founderProjects = document.getElementById("founderProjects");
+      const folderGrid =
+        document.getElementById("folderGrid");
+
+      const brandProjects =
+        document.getElementById("brandProjects");
+
+      const founderProjects =
+        document.getElementById("founderProjects");
+
 
       brandProjects.classList.remove("active");
       founderProjects.classList.remove("active");
 
+
       folderGrid.style.display = "grid";
+
 
       document.getElementById("work").scrollIntoView({
         behavior: "smooth",
         block: "start"
       });
+
     }
 
 
@@ -2329,34 +2717,49 @@
 
       if (!project) return;
 
-      const modal = document.getElementById("projectModal");
+
+      const modal =
+        document.getElementById("projectModal");
+
 
       document.getElementById("modalTitle").textContent =
         project.title;
 
+
       document.getElementById("modalSubtitle").textContent =
         project.subtitle;
+
 
       document.getElementById("modalDescription").textContent =
         project.description;
 
-      const preview = document.getElementById("modalPreview");
+
+      const preview =
+        document.getElementById("modalPreview");
+
 
       preview.innerHTML = "";
+
 
       if (project.browser) {
 
         preview.className =
           "preview-card browser-preview";
 
+
         preview.innerHTML = `
+
           <div class="browser-bar">
+
             <span class="browser-dot"></span>
             <span class="browser-dot"></span>
             <span class="browser-dot"></span>
+
           </div>
 
+
           <div class="browser-content">
+
             <div class="mini-label">
               maya's experiment
             </div>
@@ -2370,7 +2773,9 @@
               A student-focused product launch
               built around curiosity, culture and play.
             </p>
+
           </div>
+
         `;
 
       } else {
@@ -2378,24 +2783,33 @@
         preview.className =
           "preview-card image-preview";
 
+
         preview.innerHTML = `
+
           <img
             src="${project.image}"
             alt="${project.title}"
           >
+
         `;
+
       }
 
 
-      const link = document.getElementById("modalLink");
+      const link =
+        document.getElementById("modalLink");
+
 
       link.href = project.link;
-      link.textContent = project.linkText;
+
+      link.textContent =
+        project.linkText;
 
 
       modal.classList.add("open");
 
       document.body.classList.add("modal-open");
+
     }
 
 
@@ -2405,7 +2819,9 @@
         .getElementById("projectModal")
         .classList.remove("open");
 
+
       document.body.classList.remove("modal-open");
+
     }
 
 
@@ -2422,13 +2838,16 @@
        ESCAPE KEY
     ========================= */
 
-    document.addEventListener("keydown", function(event) {
+    document.addEventListener(
+      "keydown",
+      function(event) {
 
-      if (event.key === "Escape") {
-        closeProject();
+        if (event.key === "Escape") {
+          closeProject();
+        }
+
       }
-
-    });
+    );
 
   </script>
 
